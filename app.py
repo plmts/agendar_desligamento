@@ -5,7 +5,7 @@ def agendar_desligamento(tempo):
     segundos = tempo * 60
     print(f"O computador será desligado em: {tempo} minutos.")
     time.sleep(segundos-5) # Aguarda até 5 segundos antes do desligamento
-    os.system("shutdown -s -t S" if os.name == "nt" else "shutdown -n now")
+    os.system(f"shutdown -s -t {segundos}")
 
 def cancelar_desligamento():
     print("Cancelando o desligamento.")
